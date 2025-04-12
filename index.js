@@ -4,6 +4,8 @@ let numList = document.getElementById("numList");
 let increment = document.getElementById("increment");
 let decrement = document.getElementById("decrement");
 let li = document.createElement("li");
+li.textContent = 0;
+numList.appendChild(li);
 let count = 0;
 increment.addEventListener(`click` , function(){
     count++;
