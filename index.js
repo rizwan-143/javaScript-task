@@ -68,10 +68,14 @@ addlistbtn.addEventListener(`click` , function(){
         return;
     }
     let li = document.createElement("li");
-    if(userInputList === li.textContent){
-        alert("list can not be same")
-    }
+    let delbtn = document.createElement("button");
+    delbtn.textContent = "delete";
+    delbtn.addEventListener(`click` , function(){
+        li.remove()
+    })
+    delbtn.style.margin = "20px";
     li.textContent = userInputList;
+    li.appendChild(delbtn);
     toDoList.appendChild(li);
 });
 
