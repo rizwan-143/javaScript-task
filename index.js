@@ -1,5 +1,26 @@
 
 
+let numList = document.getElementById("numList");
+let increment = document.getElementById("increment");
+let decrement = document.getElementById("decrement");
+let li = document.createElement("li");
+let count = 0;
+increment.addEventListener(`click` , function(){
+    count++;
+    li.textContent = count;
+    numList.appendChild(li);
+
+});
+
+decrement.addEventListener(`click` , function(){
+    count--;
+    li.textContent = count;
+    numList.appendChild(li);
+
+});
+
+
+
 let studentsList = [
     { rollNo: 1, firstName: "rizwan", lastName: "jabbar" },
     { rollNo: 2, firstName: "khan", lastName: "ali" },
