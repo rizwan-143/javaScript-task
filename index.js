@@ -85,6 +85,47 @@ addlistbtn.addEventListener(`click` , function(){
 
 
 
+let hour = document.getElementById("hour");
+let minute = document.getElementById("minute");
+let second = document.getElementById("second");
+
+
+let time = new Date();
+let hours = time.getHours();
+let minutes = time.getMinutes();
+let seconds = time.getSeconds();
+
+
+hour.textContent = hours;
+minute.textContent = minutes;
+second.textContent = seconds;
+
+
+let secondCount = seconds; 
+let minuteCount = minutes;
+let hourCount = hours;
+setInterval(function(){
+    secondCount++;
+    if(secondCount === 60){
+        secondCount = 0;
+        minuteCount++;
+        if (minuteCount === 60){
+            minuteCount = 0;
+            hourCount++;
+        }
+        minute.textContent = minuteCount;
+        if (hourCount === 24 ){
+            hourCount = 0;
+        }
+        hour.textContent = hourCount;
+    }   
+
+    second.textContent = secondCount;
+}, 1000);
+
+
+
+
 
 // let addbtn = document.getElementById("search");
 // addbtn.addEventListener('click', function () {
