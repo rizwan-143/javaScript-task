@@ -88,7 +88,7 @@ addlistbtn.addEventListener(`click` , function(){
 let hour = document.getElementById("hour");
 let minute = document.getElementById("minute");
 let second = document.getElementById("second");
-
+let start =document.getElementById("start");
 
 let time = new Date();
 let hours = time.getHours();
@@ -104,6 +104,7 @@ second.textContent = seconds;
 let secondCount = seconds; 
 let minuteCount = minutes;
 let hourCount = hours;
+
 setInterval(function(){
     secondCount++;
     if(secondCount === 60){
@@ -121,7 +122,10 @@ setInterval(function(){
     }   
 
     second.textContent = secondCount;
-}, 1000);
+}, 1000)
+
+
+
 
 
 
